@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 usage:   shuffle.py  -f <file_name>, --file <file_name> -b <number of bytes>, --bytes <number of bytes>
 						[--dry-run]
