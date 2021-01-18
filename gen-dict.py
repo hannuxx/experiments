@@ -1,9 +1,9 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 import sys, getopt
 
 def help():
-    print 'gen-dict.py --input file --lang <language> --pattern <pattern>'
+    print('gen-dict.py --input file --lang <language> --pattern <pattern>')
     sys.exit()
 
 def main(argv):
@@ -14,22 +14,22 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv, 'hi:l:p:' ,["help", "input=", "lang=","pattern="])
     except getopt.GetoptError:
-        print "WTF!"
+        print("WTF!")
         help()
 
     for opt, arg in opts:
-        print 'opt: ', opt, ' arg:', arg
+        print('opt: ', opt, ' arg:', arg)
         if opt in ("-h", "--help"):
             help()
         elif opt in ("-i", "--input"):
-            input = arg
+            ifile = arg
         elif opt in ("-l", "--lang"):
             lang = arg
         elif opt in ("-p", "--pattern"):
             pattern = arg
-    print 'Input file is ', ifile
-    print 'Language is ', lang
-    print 'Pattern is ', pattern
+    print('Input file is ', ifile)
+    print('Language is ', lang)
+    print('Pattern is ', pattern)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

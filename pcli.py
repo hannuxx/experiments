@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import socket
 import struct
@@ -7,10 +7,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 s.connect(("localhost", 9999))
 
-ss = "Hello from Python!"
-s.send(struct.pack('s', ss))
-print 'Sent: ', ss
-
-chunk = s.recv(256)
-print 'Received: ', chunk
+s.sendall(b'Hello, world')
+back = str(s.recv(1024), 'utf-8')
+print(back)
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import socket
 import struct
@@ -14,12 +14,12 @@ for i in range(4):
 	unp = struct.unpack('I', chunk)
 	ix.append(unp[0])
 	sum = sum + unp[0]
-	print 'chunk: ', chunk, ' -- struct.unpack: ', unp
+	print('chunk: ', chunk, ' -- struct.unpack: ', unp)
 
-print 'Sum: ', sum, ' -- ix: ', ix
+print('Sum: ', sum, ' -- ix: ', ix)
 
 s.send(struct.pack('I', sum))
 
 chunk = s.recv(256)
-print chunk
+print(chunk)
 
