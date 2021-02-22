@@ -9,7 +9,8 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "args": ["--input=input.txt", "--output=output.txt", "--difficulty=4", "--block=1", "--prev=a030a16973f56c434b328926fe1775a37e5eab37df20a9761a34e4b834266ce3"],
+            #"args": ["--input=input.txt", "--output=output.txt", "--difficulty=4", "--block=1", "--prev=a030a16973f56c434b328926fe1775a37e5eab37df20a9761a34e4b834266ce3"],
+            "args": ["1", "2000"],
             "console": "integratedTerminal"
         }
     ]

@@ -27,7 +27,7 @@ def input_hash(fn):
     f=open(fn)
     line = f.readline()
     ret = sha256Str(line)
-    f.close();
+    f.close()
     return ret
 
 def output_hash(fn, nh, n, s):
@@ -37,7 +37,7 @@ def output_hash(fn, nh, n, s):
     f.write(str(n))
     f.write('\n')
     f.write(str(s))
-    f.close();
+    f.close()
     return nh, n
 
 def main(argv):
