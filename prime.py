@@ -8,7 +8,7 @@ def main(argv):
     s1=""
     s2=""
     x=0
-    if len(sys.argv) >= 2:
+    if len(argv) >= 2:
         s1 = argv[0]
         s2 = argv[1]
     else:

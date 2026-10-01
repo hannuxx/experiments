@@ -11,16 +11,16 @@ def sha256Str(txt):
     return ret
 
 def mine(d, bn, s, t, ph):
-    t0 = time.clock()
+    t0 = time.perf_counter()
     prefix_str = '0' * int(d)
     for n in range(MAX_UPPER):
         txt = str(bn) + t + ph + str(n)
         nh = sha256Str(txt)
         if (nh.startswith(prefix_str)):
             print(f'mine: FOUND: {nh} with {n}')
-            tx = time.clock() - t0
+            tx = time.perf_counter() - t0
             return nh, n, tx
-    tx = time.clock() - t0
+    tx = time.perf_counter() - t0
     return '', 0, tx
 
 def input_hash(fn):
@@ -70,7 +70,7 @@ def main(argv):
             ofile = arg
         elif opt in ("-s", "--start"):
             start_nonce = arg
-        elif opt in ("-s", "--prev"):
+        elif opt in ("-p", "--prev"):
             prev_hash = arg
     print(f'Params are: difficulty: {difficulty}, blblock_number: {block_number}, ifile: {ifile}, ofile: {ofile}, start_nonce: {start_nonce}, prev_hash: {prev_hash}')
     trans = input_hash(ifile)

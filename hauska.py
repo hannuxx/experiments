@@ -39,7 +39,7 @@ def main():
     t.show()
     Test.G1()
     t2 = Test("Koira");
-    t.show()
+    t2.show()
     Test.G1()    
 
 if __name__ == "__main__":

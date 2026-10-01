@@ -18,7 +18,7 @@ for i in range(4):
 
 print('Sum: ', sum, ' -- ix: ', ix)
 
-s.send(struct.pack('I', sum))
+s.send(struct.pack('I', sum & 0xFFFFFFFF))
 
 chunk = s.recv(256)
 print(chunk)
