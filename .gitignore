@@ -1,0 +1,9 @@
+# Script output (rewritten on every run)
+output.txt
+out.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
